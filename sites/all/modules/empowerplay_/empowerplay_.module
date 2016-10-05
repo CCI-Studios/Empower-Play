@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Empowerplay  feature.
+ */
+
+include_once 'empowerplay_.features.inc';

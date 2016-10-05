@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * Implements hook_webform_submission_insert().
+ */
+function custom_paypal_webform_submission_insert($node, $submission) {
+
+    if ($node->nid == 27)
+    {
+        $params = array();
+        $mapping = _custom_paypal_webform_component_mapping($node);
+        $method = $submission->data[$mapping['payment_method']][0];
+        $params['node'] = $node;
+        $params['submission'] = $submission;
+        $to = 'info@empower-play.com';
+
+        if($method=="dropoff")
+        {     
+              drupal_mail('custom_paypal','admin',$to,language_default(),$params,"Empower play <info@empower-play.com>");
+             drupal_goto($GLOBALS['base_url'].'/thank-you');
+        }
+
+        
+        drupal_mail('custom_paypal','admin',$to,language_default(),$params,"Empower play <info@empower-play.com>");
+             _custom_paypal_ticket_purchase($node, $submission);
+    }
+}
+
+/**
+ * Function to convert webform submissions into a nicely-mapped array.
+ *
+ * @see http://www.drupalcoder.com/story/678-additional-processing-in-drupals-webform-3-module
+ */
+function _custom_paypal_webform_component_mapping($node) {
+    $mapping = array();
+    $components = $node->webform['components'];
+    foreach ($components as $i => $component) {
+        $key = $component['form_key'];
+        $mapping[$key] = $i;
+    }
+    return $mapping;
+}
+
+function _custom_paypal_ticket_purchase($node, $submission)
+{
+    $mapping = _custom_paypal_webform_component_mapping($node);
+     $return_url = _custom_paypal_get_return_url($node);
+
+    $paypal_options = array();
+    $paypal_options['cmd'] = '_xclick'; // Varies depending on type of payment sent via PayPal
+    $paypal_options['business'] = "info@empower-play.com" ; // PayPal account email
+    $paypal_options['page_style'] = 'primary'; // Set this in PayPal prefs, then change here (default = paypal)
+    $paypal_options['currency_code'] = 'CAD';
+    $paypal_options['amount'] = '450';
+    $paypal_options['handling'] ='5';
+    $paypal_options['quantity'] ='1';
+    $paypal_options['return'] = $return_url; 
+    $paypal_options['item_name'] = $node->title;
+    $paypal_options['no_shipping'] = '1'; // Don't prompt user for shipping address
+    $paypal_options['no_note'] = '1'; // Don't prompt user for extra information (note)
+    $paypal_options['rm'] = '1'; // Return method - 1 = browser redirected to return URL by GET method w/o variables
+    $paypal_options['return'] = $GLOBALS['base_url'].'/thank-you'; // Page to which user is returned
+    $paypal_options['cbt'] = 'Return to Empowerplay';
+    _custom_paypal_goto_paypal($paypal_options);
+}
+
+
+function _custom_paypal_get_return_url($node)
+{
+    return $GLOBALS['base_url'].'/thank-you';
+}
+
+
+function _custom_paypal_goto_paypal($paypal_options)
+{
+    // Build the URL/query for PayPal payment form.
+    $query = http_build_query($paypal_options, '', '&');
+    $url = 'https://www.paypal.com/cgi-bin/webscr?' . $query;
+
+    // Redirect user to PayPal...
+    drupal_goto($url);
+}
+
+
+function custom_paypal_mail($key, &$message, $params)
+{ switch($key)
+    {
+                
+        case 'admin':
+            $node = $params['node'];
+            $submission = $params['submission'];
+        
+            $message['subject'] = t('Hockey Registration Form');
+             
+             $body1=webform_submission_render($node, $submission, NULL, 'email');
+            $body = drupal_render($body1);
+            $body .='Please verify the paypal confirmation email to see the payment details of the team.';
+          
+            $message['body'][] = $body;
+            $message['headers']['Reply-To'] = "";
+
+            break;
+    }
+           
+}
+
+
+?>

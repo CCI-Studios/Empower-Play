@@ -1,0 +1,718 @@
+@media screen and (max-width:1220px) 
+{
+	.view-stories-slider .view-footer
+	{
+		right:20px;
+	}
+
+	.view-stories-slider .view-header
+	{
+		left:20px;
+	}
+
+
+	#block-block-3
+	{
+		width: 73%;
+	}
+}
+
+
+@media screen and (min-width:1091px) 
+{
+	#block-system-main-menu
+	{	
+		display: block!important;
+	}	
+}
+
+@media screen and (max-width:1090px) 
+{	
+	#block-block-15
+	{	
+		right: 20px;
+		position: absolute;
+		bottom: 20px;
+
+		div.contextual-links-wrapper
+		{
+			display: none;
+		}
+	}
+
+
+	#mobile-menu
+	{
+		display: block;
+	}
+
+	#block-system-main-menu
+	{
+		display: none;
+		width:auto;
+		position:absolute;
+		top:124px;
+		right:0px;
+		width:335px;
+		padding-top:0px;
+		background:white;
+		padding-bottom:20px;
+
+		li.expanded
+		{
+			ul.menu
+			{
+				display: block;
+				position: relative;
+				width:auto;
+				top:auto;
+
+				li a
+				{
+					padding-left:25px;
+				}
+			}
+		}
+
+		ul.menu 
+		{	
+			float: none;
+			li
+			{
+				//display: inline-block;
+				//margin-right:20px;
+				float: none;
+
+				&:after
+				{
+					display: none;
+				}
+
+				a
+				{
+					padding:20px 20px;
+					display: block;
+					text-align: left;
+					border-bottom:1px solid #b3b3b3;
+					line-height: initial;
+				}
+			}
+		}
+
+		.social-icons
+		{
+			display: block;
+			padding-left:20px;
+			line-height:initial;
+		}
+
+	}
+}
+
+@media screen and (max-width:960px) 
+{	
+	#block-block-6
+	{
+		padding:70px 20px;
+	}
+
+	#footer-inner
+	{
+		padding: 0 20px;
+	}
+
+	#block-block-4 
+	{	
+		h2
+		{
+			width:100%;
+		}
+		.box1
+		{
+			float: none;
+			width:100%;
+		}
+
+		#baseball
+		{
+			top:0px;
+			float: none;
+			margin: 0 auto;
+
+			&:after
+			{
+				top: 225px;
+				right: -47px;
+			}
+		}
+
+		&:before
+		{
+			display: none;
+		}
+
+		#circle
+		{
+			right: 0px;
+			position: relative;
+			bottom: 0px;
+			float: none;
+			margin: 0 auto;
+
+			p
+			{
+				position:relative;
+			}
+		}
+
+		#middle-statement
+		{
+			img
+			{
+				display: none;
+			}
+
+			p
+			{
+				width:90%;
+				float: none;
+				margin: 0 auto;
+			}
+		}
+		
+	}
+
+	#big-box:after
+	{
+		display: none !important;
+	}
+
+	#one-in-five:after,
+	.arrow-animate-4 #one-in-five:after
+	{
+		display: none ! important;
+	}
+
+	
+}
+
+@media screen and (max-width:920px) 
+{	
+	#block-block-5 
+	{	
+
+		text-align: center;
+
+		#one-in-ten:before,
+		#one-in-ten:after
+		{
+			display: none;
+		}
+
+		img
+		{
+			float: none!important;
+		}
+
+		#one-in-ten
+		{
+			float: none;
+			width:100%;
+
+			p
+			{
+				padding-top: 0px;
+			}
+		}
+
+		&:after,
+		&:before
+		{
+			display: none;
+		}
+
+		#one-in-five:before,
+		#one-in-five:after
+		#one-in-ten:after
+		{
+			display: none;
+		}
+	}
+
+	#block-block-3 
+	{
+		h2
+		{
+			font-size: 70px;
+		}
+	}
+
+	.logos
+	{
+		max-width: 500px;
+		margin: 0 auto;
+
+		p
+		{
+			padding-bottom:20px!important;
+		}
+	}
+
+
+}
+
+@media screen and (max-width:875px) 
+{
+	#block-views-events-block-block 
+	{	
+		.agenda-block
+		{
+			max-width: 730px;
+			margin: 0 auto;
+		}
+		
+		.views-row
+		{
+			padding:0 30px;
+			 width: 42%;
+		}
+	}
+
+
+
+	.rows-inner
+	{
+		padding:0 40px;
+	}
+
+
+	#block-webform-client-block-6
+	{
+		width:65%;
+	}
+
+	#block-block-7
+	{
+		width:28%;
+		margin-left: 30px;
+	}
+
+	.view-stories-slider .view-footer
+	{
+		right:10px;
+		background-position:right;
+	}
+
+	.view-stories-slider .view-header
+	{
+		left:10px;
+	}
+
+	.field-name-field-image-stories
+	{
+		float: none;
+		margin: 20px auto;
+	}
+
+	.node-type-testimonials .field-name-body
+	{
+		width: 100%;
+	}
+		#block-block-17 p
+	{
+		padding-right:20px;
+	}
+}	
+
+@media screen and (max-width:767px) 
+{	
+
+
+	.view-header-slider 
+	{	
+		.views-row
+		{
+			min-height: 650px;
+		}
+
+		.views-field-body
+		{
+			max-width: 300px;
+
+			img
+			{
+				width: 300px!important;
+				height: auto!important;
+			}
+		}
+		
+	}
+
+	#header
+	{
+		position: relative;
+	}
+
+	#banner
+	{
+		padding-top:0px;
+	}
+
+	#block-block-4 #big-box
+	{
+		min-height:100px;
+	}
+
+	#block-views-random-stats-block
+	{
+		display: block;
+		text-align: center;
+		padding-bottom:40px;
+
+		.views-field-title
+		{
+			font-size: 48px;
+		}
+
+		h2
+		{
+			color:$green;
+			margin-bottom: 10px;
+		}
+
+		h4
+		{
+			font-family:'lato' , sans-serif;
+			font-style:italic;
+		}
+	}
+
+	#baseball
+	{
+		display: none;
+	}
+
+	#block-views-events-block-block 
+	{	
+		.views-row
+		{
+			float: none;
+			width:100%;
+			margin: 0px;
+			padding:0px;
+		}
+
+		.view-content
+		{
+			padding:0 10px;
+
+			.views-row-2
+			{
+				border-top: 1px solid #5f952b;
+				border-left:0px;
+				padding-top:20px;
+			}
+
+			.views-row-1
+			{	
+				border-bottom: 1px solid #8ccb35;
+				border-right:0px;
+				padding-bottom:20px;
+			}
+
+		}
+	}
+
+	#block-block-3
+	{
+		width:60%;
+
+		h2
+		{
+			font-size: 70px;
+		}
+	}
+
+	.view-header-slider .view-header
+	{
+		left:10px;
+	}
+	.view-header-slider .view-footer
+	{
+		right:10px;
+		background-position:right;
+	}
+	.view-header-slider .view-header, 
+	.view-header-slider .view-footer
+	{
+		background-size:80%;
+
+		a
+		{
+			height:50px;
+			width:50px;
+		}
+	}
+
+	#block-block-4 #baseball
+	{	
+
+		width: 320px;
+		height: 320px;
+
+		&:before
+		{
+			background: url("../images/baseball.png") no-repeat;
+			content: "";
+			display: block;
+			width: 320px;
+			height: 400px;
+			background-size: 100%;
+		}
+
+		.stats
+		{
+			font-size: 75px;
+		}
+
+		p
+		{
+		  position: absolute;
+		  top: 100px;
+		  width: 187px;
+		  padding-left: 115px;
+		  top: 41px;
+		  font-size: 15px;
+		}
+
+		&:after
+		{
+			display: none;
+		}
+	 
+	}
+
+	.view-stories-slider .view-header
+	{
+		left:10px;
+	}
+
+	.view-stories-slider .view-footer
+	{
+		right:10px;
+		background-position:center right;
+	}
+
+
+	#circle,
+	#middle-statement,
+	#block-block-5
+	{
+		display: none;
+	}
+
+	#block-webform-client-block-6 
+	{	
+		float: none;
+		width:100%;
+
+		.content
+		{
+			border-right:0px;	
+		}
+		
+	}
+
+	#block-block-7
+	{	
+		width: 50%;
+		padding: 20px 0px 0 0px;
+		border-top:1px solid #ccc;
+		margin-top: 10px;
+		margin-left: 0px;
+
+		h2
+		{
+			display: none;
+		}
+	}
+
+	h2:after, 
+	#block-block-9 h2:after, 
+	#block-block-4 h2:after, 
+	#page-title:after, 
+	#page-title-stories:after
+	{
+		margin-top: -20px;
+	}
+}
+
+
+@media screen and (max-width:723px) 
+{
+	.webform-client-form-27
+	{
+		padding-bottom:160px;
+	}
+}
+
+@media screen and (max-width:500px) 
+{
+	.image-list
+	{
+		margin-bottom:10px;
+	}
+
+	.not-front #content
+	{
+		background:url('../images/main_back1.png') repeat;
+		background-size:initial;
+	}
+
+	.region-black-region
+	{
+		padding:60px 10px 0px;
+		background:url('../images/volleyball_net.png') no-repeat;
+		background-position:center bottom;
+		background-size:95%;
+	}
+
+	.view-stories .info-box
+	{
+		width:100%;
+	}
+
+	#block-system-main-menu 
+	{	
+		width:308px;	
+	}
+
+	#block-block-4 
+	{
+		#baseball:before
+		{
+			background-size:87%;
+		}
+
+		#baseball 
+		{	
+			.stats
+			{
+				font-size: 75px;
+			}
+
+			p
+			{
+				padding-left:93px;
+				top:-5px;
+			}
+			
+		}
+	}
+		
+	#green-region .inner-content,
+	#block-block-6
+	{
+		padding:60px 10px;
+	}
+
+	#footer-inner
+	{
+		padding:0 10px;
+		margin:60px auto;
+	}
+
+	h2,
+	#block-block-4 h2,
+	#page-title,
+	#page-title-stories,
+	#block-block-6 h2, 
+	#block-agenda-1 h2, 
+	#block-block-8 h2,
+	#block-webform-client-block-6 h2, 
+	#block-block-7 h2,
+	#block-block-9 h2
+	{
+		font-size: 48px;
+	}
+	#block-block-7
+	{
+		width: 80%;
+	}
+
+	#block-block-8
+	{
+		width:70%;
+	}
+
+	#block-block-3
+	{
+		top:48%;
+	}
+
+	.fc-header-left,
+	.fc-header-center,
+	.fc-header-right
+	{
+		display: block;
+	}
+
+	.fc-header-center
+	{
+		margin-top: 20px;
+		text-align: left;
+	}
+
+	.inner-content
+	{
+	  background-size: 95%;
+	  padding: 60px 10px;
+	}
+
+	#black-region,
+	#content
+	{
+		background-position:center;
+	}
+
+	.inner-content h2
+	{
+		font-size: 42px;
+	}
+
+	.page-node-10 .inner-page-title #page-title,
+	.page-node-9 .inner-page-title #page-title,
+	.page-node-7 .inner-page-title #page-title,
+	.page-stories .inner-page-title #page-title,
+	.node-type-testimonials .inner-page-title #page-title-stories,
+	.inner-page-title #page-title,
+	.page-events .inner-page-title #page-title,
+	.inner-page-title #page-title-stories
+	{
+		font-size: 54px;
+		background-position:50%;
+	}
+
+	#block-block-17
+	{
+		color:black;
+
+		p
+		{	
+			display: block;
+			padding-right: 0px;
+			padding-bottom:30px;
+		}
+
+		p:last-child
+		{
+			padding-bottom:0px;
+		}
+	}
+
+	.view-stories .image-list
+	{
+		float: none;
+		//margin:0 auto;
+	}
+}

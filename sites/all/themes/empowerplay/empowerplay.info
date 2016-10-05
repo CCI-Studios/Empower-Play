@@ -1,0 +1,25 @@
+name = empowerplay
+description = empowerplay Custom
+core = 7.x
+
+scripts[] = js/banner_slider.js
+scripts[] = js/scroll.js
+scripts[] = js/stories-slider.js
+scripts[] = js/mobile-menu.js
+scripts[] = js/form-validation.js
+;scripts[] = swipebox-master/js/jquery.swipebox.min.js
+scripts[] = js/swipebox.js
+
+stylesheets[all][] = css/screen.css
+
+regions[navigation] = Navigation
+regions[header] = Header
+regions[banner] = banner slider
+regions[black-region] =Black Region
+regions[testimonial] =Testimonial
+regions[events-volunteers] =Events and Volunteers
+regions[volunteers] =Volunteers
+regions[content] = Content
+regions[green-region] = Green region
+regions[bottom-logos] = bottom logos
+regions[footer] = Footer
