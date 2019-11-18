@@ -8,36 +8,42 @@
 	{
 		init();	
 		if (document.location.href.indexOf('contact-form-submit') > -1  )
-		{
-			$('#block-block-8').fadeIn();
-			$('#block-block-8').addClass('overlay');	
-		}
+			{
+				$('#block-block-8').fadeIn();
+				$('#block-block-8').addClass('overlay');	
+			}
 
-		$(document).mouseup(function (e)
-		{	
-			var container =$('#block-block-8');
-			if (!container.is(e.target)
-				        && container.has(e.target).length === 0) 
-				    {
-				        container.fadeOut();
-				    }
-		});
+			$(document).mouseup(function (e)
+			{	
+				var container =$('#block-block-8');
+				if (!container.is(e.target)
+					        && container.has(e.target).length === 0) 
+					    {
+					        container.fadeOut();
+					    }
+			});
 
-		$('#contact').click(function(event){
+			$('#contact').click(function(event){
 
-			
-			$("a#contact").attr("href","");
-			$("a#contact").attr("href","#contactlink");
-		});
+				
+				$("a#contact").attr("href","");
+				$("a#contact").attr("href","#contactlink");
+			});
 	});
 
 	function init()
 	{
-		
+		max = rows().length;
+
+		if (max <= 1) {
+			rows().width('100%')
+			$("#prev, #next").remove()
+			return
+		}
+
 		$("#prev").click(clickPrevious);
 		$("#next").click(clickNext);
 		$("#block-views-header-slider-block .views-row").click(stop);
-		max = rows().length;
 
 		var $first = rows().eq(0).clone();
 		container().append($first);
